@@ -1,5 +1,37 @@
 body{
-    height: 0px;
-    width: 0px;
+    padding:0;
+    margin:0;
     background-color:darkcyan;
+    box-sizing: border-box;
 }
+
+
+
+
+
+
+
+#header{
+    width:100%;
+    height: 60px;   
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    padding:0px 30px;
+    border: 5px solid white;
+}
+
+.left-menu{
+    display:flex;
+    flex-direction: row;
+}
+
+.left-menu li{
+    position:relative;
+    display:flex;
+    margin:15px;
+    
+}
+
+

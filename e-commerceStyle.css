@@ -13,8 +13,10 @@ body{
     border: 5px  solid black;
     display: flex;
     flex-direction: row;
-    justify-content:center;
-    align-items:center;
+    justify-content:space-between;
+    align-items:space-between;
+    
+    
     
 }
 
@@ -23,10 +25,14 @@ body{
     width: 25%;  
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     border: 5px  solid whitesmoke;
+    
 
+}
+.item p{
+    padding-left: 0 !important;
 }
 
 .image{
@@ -77,3 +83,35 @@ body{
 }
 
 
+#items2{
+
+    margin:20px;
+    padding : 0;
+    width: 100%; 
+    border: 5px  solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:space-between;
+    
+    
+    
+}
+.items-header{
+    margin: auto;
+    padding-left: 20px;
+}
+#items3{
+
+    margin:20px;
+    padding : 0;
+    width: 100%; 
+    border: 5px  solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:space-between;
+    
+    
+    
+}

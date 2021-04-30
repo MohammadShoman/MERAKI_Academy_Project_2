@@ -4,6 +4,10 @@ body {
   background-color: darkcyan;
   box-sizing: border-box;
 }
+#title{
+    background-color:black;
+    color:rgb(204, 142, 28);
+}
 
 #items {
   margin: 20px;
@@ -38,12 +42,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px ;
   border: 5px solid white;
 }
 .shop {
   height: 50px;
-  width: 25px;
+  width: 50px;
 }
 
 .left-menu {
@@ -142,4 +146,10 @@ body {
     color: black;
     background-color:rgba(153, 77, 27, 0.685);
     margin-top: 10px;
+}
+.item-a { width:100%; }
+
+@media (max-width: 768px) {
+    .item-a { width:100px; }
+    
 }

@@ -31,6 +31,7 @@ const items2 = $("#items2");
 const items3 = $("#items3");
 const slider_btn=$(".slider-btn")
 
+
 $(".slider-btn").on("click",function(){
   $("#items").html("");
 
@@ -104,4 +105,13 @@ $("#shoes").on("click", function () {
   $("#items2").hide();
   
   
+});
+
+$(document).ready(function() {
+  $('#adaptive').lightSlider({
+      adaptiveHeight:true,
+      item:1,
+      slideMargin:0,
+      loop:true
+  });
 });

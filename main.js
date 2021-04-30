@@ -2,20 +2,20 @@ console.log("e-commerce");
 
 const allItems = [
   [
-    { name: "Tshirt", description: "use it", img: "./images/download.jfif" },
-    { name: "Tshirt", description: "use it", img: "./images./img_2.JPG" },
-    { name: "Tshirt", description: "use it", img: "./images/img_3.jfif" },
-    { name: "Tshirt", description: "use it", img: "./images/img_4.jfif" },
-    { name: "Tshirt", description: "use it", img: "./images/img_5.jfif" },
-    { name: "Tshirt", description: "use it", img: "./images/img_6.jfif" }
+    { name: "Tshirt", description: "25.00 $", img: "./images/download.jfif" },
+    { name: "Tshirt", description: "17.00 $", img: "./images./img_2.JPG" },
+    { name: "Tshirt", description: "10.00 $", img: "./images/img_3.jfif" },
+    { name: "Tshirt", description: "10.00 $", img: "./images/img_4.jfif" },
+    { name: "Tshirt", description: "17.00 $", img: "./images/img_5.jfif" },
+    { name: "Tshirt", description: "25.00 $", img: "./images/img_6.jfif" }
   ],
   [
-    { name: "Jeans", description: "use it", img: "./images/jeans1.jfif" },
-    { name: "Jeans", description: "use it", img: "./images./jeans2.jfif" },
-    { name: "Jeans", description: "use it", img: "./images/jeans3.jfif" },
-    { name: "Jeans", description: "use it", img: "./images/jeans4.jfif" },
-    { name: "Jeans", description: "use it", img: "./images/jeans5.jfif" },
-    { name: "Jeans", description: "use it", img: "./images/jeans6.jfif" }
+    { name: "Jeans", description: "25.00 $", img: "./images/jeans1.jfif" },
+    { name: "Jeans", description: "17.00 $", img: "./images./jeans2.jfif" },
+    { name: "Jeans", description: "10.00 $", img: "./images/jeans3.jfif" },
+    { name: "Jeans", description: "17.00 $", img: "./images/jeans4.jfif" },
+    { name: "Jeans", description: "25.00 $", img: "./images/jeans5.jfif" },
+    { name: "Jeans", description: "10.00 $", img: "./images/jeans6.jfif" }
   ],
   [
     { name: "Shoes", description: "use it", img: "./images/shoes.jfif" },
@@ -115,3 +115,5 @@ $(document).ready(function() {
       loop:true
   });
 });
+
+

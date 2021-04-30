@@ -1,123 +1,145 @@
-body{
-    padding:0;
-    margin:0;
-    background-color:darkcyan;
-    box-sizing: border-box;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: darkcyan;
+  box-sizing: border-box;
 }
 
-#items{
+#items {
+  margin: 20px;
+  padding: 0;
+  width: 100%;
 
-    margin:20px;
-    padding : 0;
-    width: 100%; 
-    
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items:space-between;
-    
-    
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
 }
-
 
 .item {
-    width: 25%;  
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid whitesmoke;
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+}
+
+#header {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border: 5px solid white;
+}
+.shop {
+  height: 50px;
+  width: 25px;
+}
+
+.left-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-menu li {
+  position: relative;
+  display: flex;
+  margin: 15px;
+}
+.left-menu li a {
+  color: darkorange;
+}
+.left-menu a:hover {
+  color: black;
+}
+
+.right-menu a {
+  margin: 0;
+  color: black;
+}
+.right-menu a:hover {
+  color: orange;
+}
+
+#items2 {
+  margin: 20px;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+#items3 {
+  margin: 20px;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.full-slider {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 25px;
+}
+
+.slide-1 {
+  background-image: url("./images/top-view-color-t-shirt-grey-wood-plank-background_30478-1351.jpg");
+}
+
+.slider-text {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+.f-slider-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.f-slider-text strong {
+  color: black;
+  font-size: 4rem;
+  line-height: 55px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.f-slider-text span {
+    letter-spacing: 6px;
+    color:rgba(0, 0, 0, 0.979);
+    font-weight:500px;
+    font-size:2rem;
+}
+.slider-btn{
+    width: 170px;
+    height: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items:center;
-    border: 5px  solid whitesmoke;
-    
-
-}
-
-
-.image{
-    height:165px;
-    width: 100%;
-}
-
-#header{
-    width:100vw;
-    height: 60px;   
-    display:flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items:center;
-    padding:0px 20px;
-    border: 5px solid white;
-}
-.shop{
-    height: 50px;
-    width: 25px;
-    
-}
-
-.left-menu{
-    display:flex;
-    flex-direction: row;
-}
-
-.left-menu li{
-    position:relative;
-    display:flex;
-    margin:15px;
-    
-}
-.left-menu li a{
-    color:darkorange;
-}
-.left-menu a:hover{
-    color:black;
-}
-
-.right-menu a{
-    margin: 0;
-    color:black;
-}
-.right-menu a:hover{
-    color:orange;
-}
-
-
-#items2{
-
-    margin:20px;
-    padding : 0;
-    width: 100%; 
-    
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items:space-between;
-    
-    
-    
-}
-
-#items3{
-
-    margin:20px;
-    padding : 0;
-    width: 100%; 
-    
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items:space-between;
-    
-    
-    
-}
-
-.full-slider{
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color:rgba(153, 77, 27, 0.685);
+    margin-top: 10px;
 }

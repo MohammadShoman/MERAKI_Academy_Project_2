@@ -123,7 +123,12 @@ const getItemJeans=(elem)=>{
   localStorage.setItem("cart22",JSON.stringify(array))
 }
 
-
+const getShoesItem=(elem)=>{
+  counterShop++
+  counter.innerText=counterShop
+  array.push(allItems[2][elem])
+  localStorage.setItem("cart22",JSON.stringify(array))
+}
 
 
 //---------------------------------------------------------

@@ -3,6 +3,9 @@
     margin:0;
     box-sizing:border-box;
 }
+a{
+  text-decoration:none;
+}
 body {
   padding: 0;
   margin: 0;
@@ -10,8 +13,19 @@ body {
   box-sizing: border-box;
 }
 #title{
-    background-color:black;
-    color:rgb(204, 142, 28);
+    color:black;
+    font-style: oblique;
+    margin-left: 6px; 
+    box-shadow: 0px 4px 31px 10px rgba(0,0,0,0.87);
+    font-weight:700;
+    
+}
+.shopName{
+  color:orange;
+  font-size:35px;
+  font-style: oblique;
+  font-weight:900;
+
 }
 
 #items {
@@ -114,51 +128,7 @@ body {
   font-size: 25px;
 }
 
-.slide-1 {
-  background-image: url("./images/top-view-color-t-shirt-grey-wood-plank-background_30478-1351.jpg");
-}
-
-.slider-text {
-  width: 80%;
-  height: 90%;
-  display: flex;
-  align-items: center;
-}
-.f-slider-text {
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
-}
-.f-slider-text strong {
-  color: black;
-  font-size: 4rem;
-  line-height: 55px;
-  margin-top: 10px;
-  letter-spacing: 1px;
-}
-.f-slider-text span {
-    letter-spacing: 6px;
-    color:rgba(0, 0, 0, 0.979);
-    font-weight:500px;
-    font-size:2rem;
-}
-.slider-btn{
-    width: 170px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    background-color:rgba(153, 77, 27, 0.685);
-    margin-top: 10px;
-}
 
 
-.item-a { width:100%; }
-.item-b { width:100%; }
-.item-c { width:100%; }
-@media (max-width: 768px) {
-    .item-a { width:100px; }
-    .item-b { width:100px; }
-    .item-c { width:100px; }
-}
+
+

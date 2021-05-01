@@ -58,7 +58,25 @@ $(".slider-btn").on("click",function(){
   $("#items3").hide();
   $(".homeTitle").hide()
 });
+$(".slider-btnS").on("click",function(){
+  $("#items").html("");
 
+  for (i = 0; i < allItems[0].length; i++) {
+    
+    const myItem = $(`<div class="item">
+      <img class="image" src=${allItems[0][i]["img"]}>
+      <p>${allItems[0][i]["name"]}</p>
+      <p>${allItems[0][i]["price"]}</p>
+      <button>cart</button>
+  </div>`);
+    myItem.appendTo(items);
+   
+  }
+  $("#items").show();
+  $("#items2").hide();
+  $("#items3").hide();
+  $(".homeTitle").hide()
+});
 
 
 

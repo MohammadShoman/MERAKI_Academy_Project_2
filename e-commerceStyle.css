@@ -42,7 +42,7 @@ body {
 
 .item {
   
-  width: 100%;
+  width: 25%;
   /*height: 300px;*/
   margin: 0px 15px;
   justify-content: space-between;
@@ -294,7 +294,18 @@ font-style:italic;
   
 }
 
-.addedItem{
-  width: 200px;
-  height:300px
+
+#addedItem{
+  
+  margin-top: 50px;
+  height:400px;
+  width: 100%;
+  
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
 }
+
+
+

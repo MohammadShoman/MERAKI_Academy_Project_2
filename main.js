@@ -35,6 +35,8 @@ const itemShop = $("#addedItem");
 let counterShop=0
 
 //-----------------------------------------------------------------
+
+//home button
 $("#home").on("click", function () {
   $("#items").hide();
   $("#items2").hide();
@@ -44,7 +46,7 @@ $("#home").on("click", function () {
   $("#addedItem").hide();
 });
 //-----------------------------------------------------------------
-
+//slider button
 $(".slider-btn").on("click", function () {
   
   $("#items").show();
@@ -67,6 +69,8 @@ $(".slider-btnS").on("click", function () {
 });
 
 //---------------------------------------------------------------
+
+//T-Shirt
 $("#t-shirt").on("click", function () {
   $("#items").html("");
 
@@ -86,6 +90,8 @@ $("#t-shirt").on("click", function () {
   $("#slider").show();
   $("#addedItem").hide();
 });
+//----------------------------------------------------------
+//array to added on cart
 const counter=document.querySelector(".counter")
 const array=[]
 const getItem=(elem)=>{
@@ -112,6 +118,7 @@ const getShoesItem=(elem)=>{
 
 
 //---------------------------------------------------------
+//cart button
 $(".shop").on("click", function () {
   $("#items2").hide();
   $("#items3").hide();
@@ -133,6 +140,7 @@ myItem.appendTo(itemShop);
 });
 
 //----------------------------------------------------------
+//jeans button
 $("#jeans").on("click", function () {
   $("#items2").html("");
 
@@ -154,6 +162,7 @@ $("#jeans").on("click", function () {
 });
 
 //-------------------------------------------------------------------
+//shoes button
 $("#shoes").on("click", function () {
   $("#items3").html("");
   for (i = 0; i < allItems[2].length; i++) {

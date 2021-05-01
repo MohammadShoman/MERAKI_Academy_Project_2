@@ -36,6 +36,7 @@ $("#home").on("click",function(){
   $("#items2").hide();
   $("#items3").hide();
   $(".homeTitle").show()
+  $("#slider").show();
 })
 
 
@@ -48,7 +49,7 @@ $(".slider-btn").on("click",function(){
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["price"]}</p>
-      <button>cart</button>
+      <button class="btnn">Add Item</button>
   </div>`);
     myItem.appendTo(items);
    
@@ -57,6 +58,7 @@ $(".slider-btn").on("click",function(){
   $("#items2").hide();
   $("#items3").hide();
   $(".homeTitle").hide()
+  $("#slider").show();
 });
 $(".slider-btnS").on("click",function(){
   $("#items").html("");
@@ -76,6 +78,7 @@ $(".slider-btnS").on("click",function(){
   $("#items2").hide();
   $("#items3").hide();
   $(".homeTitle").hide()
+  $("#slider").show();
 });
 
 
@@ -99,6 +102,15 @@ $("#t-shirt").on("click", function () {
   $(".homeTitle").hide()
 });
 
+$(".shop").on("click", function(){
+  $("#items2").hide();
+  $("#items3").hide();
+  $(".homeTitle").hide()
+  $("#items").hide();
+  $("#slider").hide();
+})
+
+
 $("#jeans").on("click", function () {
   $("#items2").html("");
 
@@ -115,6 +127,7 @@ $("#jeans").on("click", function () {
   $("#items3").hide();
   $("#items").hide();
   $(".homeTitle").hide()
+  $("#slider").show();
 });
 
 
@@ -135,6 +148,7 @@ $("#shoes").on("click", function () {
   $("#items").hide();
   $("#items2").hide();
   $(".homeTitle").hide()
+  $("#items").show();
   
   
 });

@@ -128,7 +128,82 @@ body {
   font-size: 25px;
 }
 
+.slide-1 {
+  background-image: url("./images/top-view-color-t-shirt-grey-wood-plank-background_30478-1351.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide-2 {
+  background-image: url("./images/jeanssss1.jfif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+.slide-3 {
+  background-image: url("./images/123.jfif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slider-text {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+.f-slider-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.f-slider-text strong {
+  color: white;
+  font-size: 4rem;
+  line-height: 55px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.f-slider-text span {
+    letter-spacing: 6px;
+    color:white;
+    font-weight:500px;
+    font-size:2rem;
+}
+.slider-btn{
+    width: 170px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color:rgba(153, 77, 27, 0.685);
+    margin-top: 10px;
+}
 
+
+
+#slider {
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#slider .slides {
+  display: block;
+  width: 6000px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  width: 1000px;
+  height: 400px;
+}
 
 
 

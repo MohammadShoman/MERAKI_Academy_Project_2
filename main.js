@@ -2,12 +2,12 @@ console.log("e-commerce");
 
 const allItems = [
   [
-    { name: "Tshirt", price: "25.00 $", img: "./images/download.jfif" },
-    { name: "Tshirt", price: "17.00 $", img: "./images./img_2.JPG" },
-    { name: "Tshirt", price: "10.00 $", img: "./images/img_3.jfif" },
-    { name: "Tshirt", price: "10.00 $", img: "./images/img_4.jfif" },
-    { name: "Tshirt", price: "17.00 $", img: "./images/img_5.jfif" },
-    { name: "Tshirt", price: "25.00 $", img: "./images/img_6.jfif" }
+    { name: "T-shirt", price: "25.00 $", img: "./images/download.jfif" },
+    { name: "T-shirt", price: "17.00 $", img: "./images./img_2.JPG" },
+    { name: "T-shirt", price: "10.00 $", img: "./images/img_3.jfif" },
+    { name: "T-shirt", price: "10.00 $", img: "./images/img_4.jfif" },
+    { name: "T-shirt", price: "17.00 $", img: "./images/img_5.jfif" },
+    { name: "T-shirt", price: "25.00 $", img: "./images/img_6.jfif" }
   ],
   [
     { name: "Jeans", price: "25.00 $", img: "./images/jeans1.jfif" },
@@ -67,7 +67,7 @@ $(".slider-btnS").on("click",function(){
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["price"]}</p>
-      <button>cart</button>
+      <button>Add Item</button>
   </div>`);
     myItem.appendTo(items);
    
@@ -89,7 +89,7 @@ $("#t-shirt").on("click", function () {
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["price"]}</p>
-      <button  >cart</button>
+      <button  >Add Item</button>
   </div>`);
     myItem.appendTo(items);
   }
@@ -107,7 +107,7 @@ $("#jeans").on("click", function () {
     <img class="image" src=${allItems[1][i]["img"]}>
     <p>${allItems[1][i]["name"]}</p>
     <p>${allItems[1][i]["price"]}</p>
-    <button>cart</button>
+    <button>Add Item</button>
 </div>`);
     myItem.appendTo(items2);
   }
@@ -126,7 +126,7 @@ $("#shoes").on("click", function () {
       <img class="image" src=${allItems[2][i]["img"]}>
       <p>${allItems[2][i]["name"]}</p>
       <p>${allItems[2][i]["price"]}</p>
-      <button>cart</button>
+      <button>Add Item</button>
       
   </div>`);
     myItem.appendTo(items3);

@@ -30,12 +30,19 @@ const items = $("#items");
 const items2 = $("#items2");
 const items3 = $("#items3");
 const slider_btn=$(".slider-btn")
+const home=$("#home")
+$("#home").on("click",function(){
+  $("#items").hide();
+  $("#items2").hide();
+  $("#items3").hide();
+})
 
 
 $(".slider-btn").on("click",function(){
   $("#items").html("");
 
   for (i = 0; i < allItems[0].length; i++) {
+    
     const myItem = $(`<div class="item">
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
@@ -43,6 +50,7 @@ $(".slider-btn").on("click",function(){
       <button>cart</button>
   </div>`);
     myItem.appendTo(items);
+   
   }
   $("#items").show();
   $("#items2").hide();
@@ -61,7 +69,7 @@ $("#t-shirt").on("click", function () {
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["price"]}</p>
-      <button >cart</button>
+      <button onclick="getItems" >cart</button>
   </div>`);
     myItem.appendTo(items);
   }
@@ -108,6 +116,7 @@ $("#shoes").on("click", function () {
   
 });
 
+//slider
 $(function() {
 
   //settings for slider
@@ -146,3 +155,14 @@ $(function() {
 
 });
 
+//---------------------------------------------------------------------------------------------------------//
+const cart=[]
+const getItems=()=>{
+
+  for (i = 0; i < allItems[0].length; i++) {
+    
+    cart.push(allItems[0][i])
+     
+}
+localStorage.setItem("cart",JSON.stringify(cart))
+}

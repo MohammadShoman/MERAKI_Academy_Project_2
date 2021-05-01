@@ -35,6 +35,7 @@ $("#home").on("click",function(){
   $("#items").hide();
   $("#items2").hide();
   $("#items3").hide();
+  $(".homeTitle").show()
 })
 
 
@@ -55,6 +56,7 @@ $(".slider-btn").on("click",function(){
   $("#items").show();
   $("#items2").hide();
   $("#items3").hide();
+  $(".homeTitle").hide()
 });
 
 
@@ -69,13 +71,14 @@ $("#t-shirt").on("click", function () {
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["price"]}</p>
-      <button onclick="getItems" >cart</button>
+      <button  >cart</button>
   </div>`);
     myItem.appendTo(items);
   }
   $("#items").show();
   $("#items2").hide();
   $("#items3").hide();
+  $(".homeTitle").hide()
 });
 
 $("#jeans").on("click", function () {
@@ -93,6 +96,7 @@ $("#jeans").on("click", function () {
   $("#items2").show();
   $("#items3").hide();
   $("#items").hide();
+  $(".homeTitle").hide()
 });
 
 
@@ -112,6 +116,7 @@ $("#shoes").on("click", function () {
   $("#items3").show();
   $("#items").hide();
   $("#items2").hide();
+  $(".homeTitle").hide()
   
   
 });
@@ -156,13 +161,4 @@ $(function() {
 });
 
 //---------------------------------------------------------------------------------------------------------//
-const cart=[]
-const getItems=()=>{
 
-  for (i = 0; i < allItems[0].length; i++) {
-    
-    cart.push(allItems[0][i])
-     
-}
-localStorage.setItem("cart",JSON.stringify(cart))
-}

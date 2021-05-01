@@ -61,7 +61,7 @@ $("#t-shirt").on("click", function () {
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
       <p>${allItems[0][i]["description"]}</p>
-      <button>cart</button>
+      <button >cart</button>
   </div>`);
     myItem.appendTo(items);
   }
@@ -144,3 +144,4 @@ $(function() {
 
 
 });
+

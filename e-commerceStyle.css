@@ -64,6 +64,7 @@ body {
   background-color: orange;
   float: right;
   border-radius: 5px;
+  padding:0 10px 0 10px;
   
 }
 .item  button:hover{
@@ -287,13 +288,14 @@ font-style:italic;
 .shopCart p{
   position: absolute;
   font-size: 18px;
-  margin:5px 0 0 30px; 
+  margin:-55px 0 0 75px; 
   background-color:black;
   color:whitesmoke;
   width:15px;
   border-radius: 50%;
   justify-content: center;
   align-items:center;
+  padding:2px;
   
 }
 
@@ -311,17 +313,29 @@ font-style:italic;
   flex-wrap: wrap;
 }
 #addedItem button{
-  font-size: 30px;
+  font-size: 25px;
   background-color: orange;
   color:black;
   border-radius: 5px;
+  padding:0 10px 0 10px;
+  margin-right: 28px;
+}
+#addedItem button:hover{
+  color:orange;
+  background-color:black;
 }
 .remove{
-  font-size: 30px;
+  font-size: 25px;
   background-color: orange;
   color:black;
   border-radius: 5px;
   float: left;
+  margin-right: 20px;
+  padding:0 10px 0 10px;
+}
+.remove:hover{
+  color:orange;
+  background-color:black;
 }
 .user{
   height: 50px;

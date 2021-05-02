@@ -126,13 +126,19 @@ $(".shop").on("click", function () {
   $("#items").hide();
   $("#slider").hide();
   $("#addedItem").show();
-  
-  for(let i=0;i<array.length;i++){
+
+  itemShop.html(``)
+
+  let fav = JSON.parse(localStorage.getItem("cart22")) || array;
+ 
+  for(let i=0;i<fav.length;i++){
   const myItem = $(`<div class="item">
-  <img class="image" src=${array[i].img}>
-  <p>${array[i].name}</p>
-  <p>${array[i].price}</p>
-  
+  <img class="image" src=${fav[i].img}>
+  <p>${fav[i].name}</p>
+  <p>${fav[i].price}</p>
+  <button class=" btn3" >Buy</button>
+  <button class=" remove" onclick="removeItem('')>remove</button>
+
 </div>`);
 myItem.appendTo(itemShop);
   }
@@ -176,6 +182,7 @@ $("#shoes").on("click", function () {
     myItem.appendTo(items3);
   }
   $("#items3").show();
+  $("#slider").show();
   $("#items").hide();
   $("#items2").hide();
   $(".homeTitle").hide();

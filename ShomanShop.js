@@ -32,6 +32,8 @@ const items3 = $("#items3");
 const slider_btn = $(".slider-btn");
 const home = $("#home");
 const itemShop = $("#addedItem");
+const allShopItem=$("#allItem")
+const homeTitle=$(".homeTitle")
 let counterShop=0
 
 //-----------------------------------------------------------------
@@ -41,32 +43,39 @@ $("#home").on("click", function () {
   $("#items").hide();
   $("#items2").hide();
   $("#items3").hide();
-  $(".homeTitle").show();
+  
   $("#slider").show();
   $("#addedItem").hide();
+  $("#allItem").show();
+  $(".homeTitle").hide();
 });
 //-----------------------------------------------------------------
 //slider button
-$(".slider-btn").on("click", function () {
-  $("#items").html("");
 
-  for (i = 0; i < allItems[0].length; i++) {
+const all= ()=> {
+  $("#allItem").html("");
+for(j=0;j<allItems.length;j++){
+   for (i = 0; i < allItems[i].length; i++) {
     const myItem = $(`<div class="item">
-      <img class="image" src=${allItems[0][i]["img"]}>
-      <p>${allItems[0][i]["name"]}</p>
-      <p>${allItems[0][i]["price"]}</p>
-      <button class=" btn3" onclick="getItem('${allItems[0][i].index}')">Add Item</button>
+      <img class="image" src=${allItems[j][i]["img"]}>
+      <p>${allItems[j][i]["name"]}</p>
+      <p class="price">${allItems[j][i]["price"]}</p>
+      <button class=" btn3" onclick="getItem('${allItems[j][i].index}')">Add Item</button>
   </div>`);
-    myItem.appendTo(items);
+    myItem.appendTo(allShopItem);
   }
-  $("#items").show();
+}
+ 
+  $("#items").hide();
   $("#items2").hide();
   $("#items3").hide();
   $(".homeTitle").hide();
   $("#slider").show();
   $("#addedItem").hide();
-});
-
+  $("#allItem").show();
+  
+};
+$(".slider-btn").on("click",all )
 //--------------------------------------------------------------------
 $(".slider-btnS").on("click", function () {
   $("#items").html("");
@@ -75,7 +84,7 @@ $(".slider-btnS").on("click", function () {
     const myItem = $(`<div class="item">
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
-      <p>${allItems[0][i]["price"]}</p>
+      <p class="price">${allItems[0][i]["price"]}</p>
       <button class=" btn3" onclick="getItem('${allItems[0][i].index}')">Add Item</button>
   </div>`);
     myItem.appendTo(items);
@@ -98,7 +107,7 @@ $("#t-shirt").on("click", function () {
     const myItem = $(`<div class="item">
       <img class="image" src=${allItems[0][i]["img"]}>
       <p>${allItems[0][i]["name"]}</p>
-      <p>${allItems[0][i]["price"]}</p>
+      <p class="price">${allItems[0][i]["price"]}</p>
       <button class=" btn3" onclick="getItem('${allItems[0][i].index}')">Add Item</button>
   </div>`);
     myItem.appendTo(items);
@@ -109,6 +118,7 @@ $("#t-shirt").on("click", function () {
   $(".homeTitle").hide();
   $("#slider").show();
   $("#addedItem").hide();
+  $("#allItem").hide();
 });
 //----------------------------------------------------------
 //array to added on cart
@@ -139,13 +149,15 @@ const getShoesItem=(elem)=>{
 
 //---------------------------------------------------------
 //cart button
-$(".shop").on("click", function () {
+
+ const getItemShop= ()=> {
   $("#items2").hide();
   $("#items3").hide();
   $(".homeTitle").hide();
   $("#items").hide();
   $("#slider").hide();
   $("#addedItem").show();
+  $("#allItem").hide();
 
   itemShop.html(``)
 
@@ -155,15 +167,16 @@ $(".shop").on("click", function () {
   const myItem = $(`<div class="item">
   <img class="image" src=${fav[i].img}>
   <p>${fav[i].name}</p>
-  <p>${fav[i].price}</p>
+  <p class="price">${fav[i].price}</p>
   <button class=" btn3" >Buy</button>
-  <button class=" remove" onclick="removeItem('${fav[i]}')">remove</button>
+  <button class=" remove" onclick="removeItem('${i}')">remove</button>
 
 </div>`);
 myItem.appendTo(itemShop);
   }
   
-});
+};
+$(".shop").on("click",getItemShop)
 const removeItem=(elem)=>{
   if(counterShop>0){
     counterShop--;
@@ -174,6 +187,7 @@ const removeItem=(elem)=>{
   
   array.splice(elem,1)
   localStorage.setItem("cart22",JSON.stringify(array))
+  getItemShop()
  
 } 
 //----------------------------------------------------------
@@ -185,7 +199,7 @@ $("#jeans").on("click", function () {
     const myItem = $(`<div class="item">
     <img class="image" src=${allItems[1][i]["img"]}>
     <p>${allItems[1][i]["name"]}</p>
-    <p>${allItems[1][i]["price"]}</p>
+    <p class="price">${allItems[1][i]["price"]}</p>
     <button class="btn3" onclick="getItemJeans('${allItems[1][i].index}')">Add Item</button>
 </div>`);
     myItem.appendTo(items2);
@@ -196,6 +210,7 @@ $("#jeans").on("click", function () {
   $(".homeTitle").hide();
   $("#slider").show();
   $("#addedItem").hide();
+  $("#allItem").hide();
 });
 
 //-------------------------------------------------------------------
@@ -206,7 +221,7 @@ $("#shoes").on("click", function () {
     const myItem = $(`<div class="item">
       <img class="image" src=${allItems[2][i]["img"]}>
       <p>${allItems[2][i]["name"]}</p>
-      <p>${allItems[2][i]["price"]}</p>
+      <p class="price">${allItems[2][i]["price"]}</p>
       <button class="btn3" onclick="getShoesItem('${allItems[2][i].index}')">Add Item</button>
       
   </div>`);
@@ -219,6 +234,7 @@ $("#shoes").on("click", function () {
   $(".homeTitle").hide();
   $("#items").hide();
   $("#addedItem").hide();
+  $("#allItem").hide();
 });
 //-----------------------------------------------------------------------
 //slider

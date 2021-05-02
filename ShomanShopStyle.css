@@ -9,7 +9,7 @@ a{
 body {
   padding: 0;
   margin: 0;
-  background-color: white;
+  background-color: rgb(223, 223, 223);
   box-sizing: border-box;
 }
 #title{
@@ -18,6 +18,10 @@ body {
     margin-left: 6px; 
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.87);
     font-weight:700;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    background-color:rgb(223, 223, 223);
     
 }
 .shopName{
@@ -25,9 +29,20 @@ body {
   font-size:35px;
   font-style: oblique;
   font-weight:900;
+  
 
 }
-
+#allItem{
+  margin: 50px auto ;
+ height:900px;
+  width: 80%;
+  
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
 #items {
   margin: 50px auto ;
  height:900px;
@@ -50,13 +65,20 @@ body {
   align-items: center;
   
   border: 2px solid whitesmoke;
-   
-  box-shadow: 5px 5px 15px 5px #000000;;
+   border-radius:5px;
+  box-shadow: 2px 2px 2px 2px #000000;;
   
 }
 .item p{
   padding-top: 10px;
   font-size:25px;
+  font-style:italic;
+  margin-left: 15px;
+  font-weight:bolder;
+}
+.item .price{
+  font-size:30px;
+  color:rgb(12, 172, 12);
 }
 .item  button{
   font-size:20px;
@@ -65,6 +87,9 @@ body {
   float: right;
   border-radius: 5px;
   padding:0 10px 0 10px;
+  font-style:italic;
+  margin-right:15px;
+  
   
 }
 .item  button:hover{
@@ -88,12 +113,16 @@ cursor:pointer;
   align-items: center;
   padding: 0px ;
   border-bottom:   5px solid orange  ;
+  position: fixed;
+  background-color: white;
+  margin-top: -20px;
   
 }
 .shop {
-  height: 50px;
-  width: 50px;
+  height: 42px;
+  width: 42px;
   color:orange;
+  margin-right:15px;
 }
 .shop:hover{
   color:black;
@@ -135,6 +164,7 @@ cursor:pointer;
   justify-content: space-between;
   align-items: space-between;
   flex-wrap: wrap;
+  
 }
 
 #items3 {
@@ -212,8 +242,11 @@ cursor:pointer;
     justify-content: center;
     align-items: center;
     color: black;
+    font-weight:bolder;
     background-color:rgba(153, 77, 27, 0.685);
     margin-top: 10px;
+    border-radius: 5px;
+    font-style:italic;
 }
 
 
@@ -223,7 +256,8 @@ cursor:pointer;
   width: 1000px;
   height: 400px;
   overflow: hidden;
-  box-shadow: 0px 4px 31px 10px rgb(0, 0, 0);
+  box-shadow: 5px 3px 5px 3px rgb(107, 72, 72);
+  margin-top: 80px;
 }
 
 #slider .slides {
@@ -269,8 +303,9 @@ cursor:pointer;
   align-items: center;
   font-weight: bold;
   font-size: 50px;
-  margin: 30px auto 0 auto;
+  margin: 20px auto 0 auto;
 font-style:italic; 
+
 
 }
 .slider-btnS{
@@ -283,26 +318,36 @@ font-style:italic;
     background-color:rgba(153, 77, 27, 0.685);
     margin-top: 10px;
     font-size: 25px;
+    border-radius: 5px;
+    font-weight:bolder;
+    
+    
 }
 
 .shopCart p{
   position: absolute;
-  font-size: 18px;
-  margin:-55px 0 0 75px; 
-  background-color:black;
-  color:whitesmoke;
-  width:15px;
+  font-size: 20px;
+  margin:-40px 0 0 75px; 
+  font-weight: bold;
+  color:black;
+  width:20px;
+  height: 20px;
   border-radius: 50%;
   justify-content: center;
   align-items:center;
-  padding:2px;
+  background-color:orange;
+  padding-left: 5px;
+  font-weight: bolder;
+  
+  
+  
   
 }
 
 
 #addedItem{
   
-  margin: 30px auto;
+  margin: 65px auto;
   
   width: 60%;
   
@@ -318,7 +363,8 @@ font-style:italic;
   color:black;
   border-radius: 5px;
   padding:0 10px 0 10px;
-  margin-right: 28px;
+  margin:5px 15px 0px 15px;
+
 }
 #addedItem button:hover{
   color:orange;
@@ -330,17 +376,20 @@ font-style:italic;
   color:black;
   border-radius: 5px;
   float: left;
-  margin-right: 20px;
+  margin:5px 5px 0px 15px;
   padding:0 10px 0 10px;
+  font-weight: bolder;
+  font-style: italic;
 }
 .remove:hover{
   color:orange;
   background-color:black;
 }
 .user{
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   color:orange;
+  margin-top: 10px;
 }
 
 .user:hover{

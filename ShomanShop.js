@@ -303,11 +303,11 @@ $("#shoes").on("click", function () {
 $(function () {
   //settings for slider
   var width = 1000;
-  var animationSpeed = 1000;
-  var pause = 3000;
+  var animationSpeed = 1500;
+  var pause = 5000;
   var currentSlide = 1;
 
-  //cache DOM elements
+  
   var $slider = $("#slider");
   var $slideContainer = $(".slides", $slider);
   var $slides = $(".slide", $slider);

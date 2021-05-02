@@ -188,13 +188,13 @@ body {
   background-size: cover;
 }
 .slide-2 {
-  background-image: url("./images/jeanssss1.jfif");
+  background-image: url("./images/pexels-photo-1598507.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .slide-3 {
-  background-image: url("./images/123.jfif");
+  background-image: url("./images/shoe-1743929__340.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -244,6 +244,7 @@ body {
   overflow: hidden;
   box-shadow: 5px 3px 5px 3px rgb(107, 72, 72);
   margin-top: 80px;
+  border-radius: 5px;
 }
 
 #slider .slides {

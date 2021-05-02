@@ -316,11 +316,12 @@ font-style:italic;
   color:black;
   border-radius: 5px;
 }
-#remove{
+.remove{
   font-size: 30px;
   background-color: orange;
   color:black;
   border-radius: 5px;
+  float: left;
 }
 
 

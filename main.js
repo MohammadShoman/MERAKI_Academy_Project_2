@@ -137,14 +137,21 @@ $(".shop").on("click", function () {
   <p>${fav[i].name}</p>
   <p>${fav[i].price}</p>
   <button class=" btn3" >Buy</button>
-  <button class=" remove" onclick="removeItem('')>remove</button>
+  <button class=" remove" onclick="removeItem('${fav[i]}')">remove</button>
 
 </div>`);
 myItem.appendTo(itemShop);
   }
   
 });
+const removeItem=(elem)=>{
+  counterShop--
+  counter.innerText=counterShop
+  array.splice(elem,1)
+  localStorage.setItem("cart22",JSON.stringify(array))
 
+
+}
 //----------------------------------------------------------
 //jeans button
 $("#jeans").on("click", function () {

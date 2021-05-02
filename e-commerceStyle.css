@@ -329,4 +329,6 @@ font-style:italic;
   color:orange;
 }
 
-
+.user:hover{
+  color:black;
+}

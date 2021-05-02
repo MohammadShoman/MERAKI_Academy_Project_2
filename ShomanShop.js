@@ -135,7 +135,7 @@ $("#home").on("click", function () {
   $(".homeTitle").hide();
 });
 //-----------------------------------------------------------------
-//slider button
+//slider button && home  --->  Shop Now button 
 
 const all = () => {
   $("#allItem").html("");
@@ -161,25 +161,7 @@ const all = () => {
 };
 $(".slider-btn").on("click", all);
 //--------------------------------------------------------------------
-$(".slider-btnS").on("click", function () {
-  $("#items").html("");
-
-  for (i = 0; i < allItems[0].length; i++) {
-    const myItem = $(`<div class="item">
-      <img class="image" src=${allItems[0][i]["img"]}>
-      <p>${allItems[0][i]["name"]}</p>
-      <p class="price">${allItems[0][i]["price"]}</p>
-      <button class=" btn3" onclick="getItem('${allItems[0][i].index}')">Add Item</button>
-  </div>`);
-    myItem.appendTo(items);
-  }
-  $("#items").show();
-  $("#items2").hide();
-  $("#items3").hide();
-  $(".homeTitle").hide();
-  $("#slider").show();
-  $("#addedItem").hide();
-});
+$(".slider-btnS").on("click", all);
 
 //---------------------------------------------------------------
 

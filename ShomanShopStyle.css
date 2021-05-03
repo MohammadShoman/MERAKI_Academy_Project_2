@@ -12,6 +12,7 @@ body {
   background-color: rgb(223, 223, 223);
   box-sizing: border-box;
 }
+/*logo*/
 #title {
   color: black;
   font-style: oblique;
@@ -40,6 +41,7 @@ body {
   align-items: space-between;
   flex-wrap: wrap;
 }
+/*-----------------------------t-shirt---------------------------------*/
 #items {
   margin: 50px auto;
   height: 900px;
@@ -434,13 +436,99 @@ body {
   font-style: italic;
 }
 /* ------------------------------------------------------------ */
+/* login*/
 .form{
+  z-index: 1;
   margin-top:45px;
-  height: 900px;
+  
   width: 100%;
-  background-color:white;
+  height: 650px;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:5px solid orange; 
+  border-radius:10px;
+  padding: 25px;
+  background-color:white;
+}
+ .btn4{
+  z-index: 1;
+  color: black;
+  width: 70px;
+  height: 70px;
   
+  margin-bottom: 30px;
+}
+ .user-input{
+  width: 320px;
+  height: 55px;
+  margin-bottom: 30px;
   
+  background-color:rgba(255,255,255,0.2);
+  color:black;
+  font-size:18px;
+  text-align: center;
+  border-radius:5px;
+  transition: 0.2s;
+  
+
+}
+.signup-form {
+  display:none;
+}
+.user-input:hover ,.user-input:focus ,.user-input:active{
+  border-left:  solid 8px orange;
+  border-right:  solid 8px orange;
+  box-shadow: 0px 0px 20px  rgb(255, 167, 15);
+}
+
+.btn{
+
+width: 320px;
+height: 55px;
+background-color:orange;
+border:2px solid black;
+border-radius: 5px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s;
+
+}
+.btn:hover{
+  border-left:  solid 8px black;
+  border-right:  solid 8px rgb(15, 15, 15);
+  box-shadow: 0px 0px 20px  rgb(17, 17, 16);
+}
+
+.option-1{
+  font-size: 14px;
+  margin-top:30px;
+
+}
+.option-1 a{
+  color :orange;
+}
+
+
+@media screen and (max-width:500px){
+  .form{
+    width: 95%;
+  }
+  .user-input{
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+  }
 }

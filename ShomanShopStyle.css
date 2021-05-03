@@ -389,3 +389,14 @@ body {
   font-style: italic;
 }
 /* ------------------------------------------------------------ */
+.form{
+  margin-top:45px;
+  height: 900px;
+  width: 100%;
+  background-color:white;
+}
+.login-form{
+  height: 500px;
+  width: 500px;
+  background-color:yellowgreen;
+}

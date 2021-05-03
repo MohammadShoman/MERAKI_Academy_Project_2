@@ -119,24 +119,31 @@ const home = $("#home");
 const itemShop = $("#addedItem");
 const allShopItem = $("#allItem");
 const homeTitle = $(".homeTitle");
-let counterShop = 0 ;
+let counterShop = 0;
 
 //localStorage.setItem("count99",JSON.stringify(counterShop))
 //-----------------------------------------------------------------
+$(".form").hide();
+$("#addedItem").hide();
+$("#allItem").hide();
+$("#items").hide();
+$("#items2").hide();
+$("#items3").hide();
 
+//------------------------------------------------------------------
 //home button
 $("#home").on("click", function () {
   $("#items").hide();
   $("#items2").hide();
   $("#items3").hide();
-
+  $(".form").hide();
   $("#slider").show();
   $("#addedItem").hide();
   $("#allItem").show();
   $(".homeTitle").hide();
 });
 //-----------------------------------------------------------------
-//slider button && home  --->  Shop Now button 
+//slider button && home  --->  Shop Now button
 
 const all = () => {
   $("#allItem").html("");
@@ -158,6 +165,7 @@ const all = () => {
   $(".homeTitle").hide();
   $("#slider").show();
   $("#addedItem").hide();
+  $(".form").hide();
   $("#allItem").show();
 };
 $(".slider-btn").on("click", all);
@@ -184,6 +192,7 @@ $("#t-shirt").on("click", function () {
   $("#items3").hide();
   $(".homeTitle").hide();
   $("#slider").show();
+  $(".form").hide();
   $("#addedItem").hide();
   $("#allItem").hide();
 });
@@ -191,33 +200,22 @@ $("#t-shirt").on("click", function () {
 //array to added on cart
 const counter = document.querySelector(".counter");
 const array = JSON.parse(localStorage.getItem("cart22")) || [];
-counter.innerText = array.length ;
+counter.innerText = array.length;
 const getItem = (elem) => {
-  
-  
-  
-  
-  
-  
   array.push(allItems[0][elem]);
-  counter.innerText = array.length ;
- // console.log(elem);
+  counter.innerText = array.length;
+  // console.log(elem);
   localStorage.setItem("cart22", JSON.stringify(array));
-  
 };
 const getItemJeans = (elem) => {
-  
-  
   array.push(allItems[1][elem]);
-  counter.innerText = array.length ;
+  counter.innerText = array.length;
   localStorage.setItem("cart22", JSON.stringify(array));
 };
 
 const getShoesItem = (elem) => {
-  
-  
   array.push(allItems[2][elem]);
-  counter.innerText = array.length ;
+  counter.innerText = array.length;
   localStorage.setItem("cart22", JSON.stringify(array));
 };
 
@@ -232,6 +230,7 @@ const getItemShop = () => {
   $("#slider").hide();
   $("#addedItem").show();
   $("#allItem").hide();
+  $(".form").hide();
 
   itemShop.html(``);
 
@@ -253,14 +252,12 @@ $(".shop").on("click", getItemShop);
 const removeItem = (elem) => {
   array.splice(elem, 1);
   //console.log(elem)
-  if (array.length  > 0) {
-    
-    counter.innerText = array.length ;
+  if (array.length > 0) {
+    counter.innerText = array.length;
   } else {
-    counter.innerText = array.length ;
+    counter.innerText = array.length;
   }
 
-  
   localStorage.setItem("cart22", JSON.stringify(array));
   getItemShop();
 };
@@ -285,6 +282,7 @@ $("#jeans").on("click", function () {
   $("#slider").show();
   $("#addedItem").hide();
   $("#allItem").hide();
+  $(".form").hide();
 });
 
 //-------------------------------------------------------------------
@@ -309,6 +307,7 @@ $("#shoes").on("click", function () {
   $("#items").hide();
   $("#addedItem").hide();
   $("#allItem").hide();
+  $(".form").hide();
 });
 //-----------------------------------------------------------------------
 //slider
@@ -319,7 +318,6 @@ $(function () {
   var pause = 5000;
   var currentSlide = 1;
 
-  
   var $slider = $("#slider");
   var $slideContainer = $(".slides", $slider);
   var $slides = $(".slide", $slider);
@@ -350,4 +348,16 @@ $(function () {
 });
 
 //---------------------------------------------------------------------------------------------------------//
+const login = $(".loginIcon");
+const login1 = $(".form");
 
+$(".loginIcon").on("click", function () {
+  $("#items3").hide();
+  $("#slider").hide();
+  $("#items").hide();
+  $("#items2").hide();
+  $(".homeTitle").hide();
+  $("#addedItem").hide();
+  $("#allItem").hide();
+  $(".form").show();
+});

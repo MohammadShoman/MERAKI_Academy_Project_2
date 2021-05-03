@@ -209,6 +209,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-right: auto;
+  font-style: italic;
 }
 .f-slider-text strong {
   color: white;
@@ -261,6 +262,7 @@ body {
   width: 1000px;
   height: 400px;
 }
+
 
 .footer {
   text-align: center;
@@ -386,3 +388,4 @@ body {
   font-weight: bolder;
   font-style: italic;
 }
+/* ------------------------------------------------------------ */

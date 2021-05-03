@@ -119,8 +119,9 @@ const home = $("#home");
 const itemShop = $("#addedItem");
 const allShopItem = $("#allItem");
 const homeTitle = $(".homeTitle");
-let counterShop = 0;
+let counterShop = 0 ;
 
+//localStorage.setItem("count99",JSON.stringify(counterShop))
 //-----------------------------------------------------------------
 
 //home button
@@ -189,25 +190,34 @@ $("#t-shirt").on("click", function () {
 //----------------------------------------------------------
 //array to added on cart
 const counter = document.querySelector(".counter");
-const array = [];
+const array = JSON.parse(localStorage.getItem("cart22")) || [];
+counter.innerText = array.length ;
 const getItem = (elem) => {
-  counterShop++;
-  counter.innerText = counterShop;
+  
+  
+  
+  
+  
+  
   array.push(allItems[0][elem]);
-  console.log(elem);
+  counter.innerText = array.length ;
+ // console.log(elem);
   localStorage.setItem("cart22", JSON.stringify(array));
+  
 };
 const getItemJeans = (elem) => {
-  counterShop++;
-  counter.innerText = counterShop;
+  
+  
   array.push(allItems[1][elem]);
+  counter.innerText = array.length ;
   localStorage.setItem("cart22", JSON.stringify(array));
 };
 
 const getShoesItem = (elem) => {
-  counterShop++;
-  counter.innerText = counterShop;
+  
+  
   array.push(allItems[2][elem]);
+  counter.innerText = array.length ;
   localStorage.setItem("cart22", JSON.stringify(array));
 };
 
@@ -241,14 +251,16 @@ const getItemShop = () => {
 };
 $(".shop").on("click", getItemShop);
 const removeItem = (elem) => {
-  if (counterShop > 0) {
-    counterShop--;
-    counter.innerText = counterShop;
+  array.splice(elem, 1);
+  //console.log(elem)
+  if (array.length  > 0) {
+    
+    counter.innerText = array.length ;
   } else {
-    counter.innerText = counterShop;
+    counter.innerText = array.length ;
   }
 
-  array.splice(elem, 1);
+  
   localStorage.setItem("cart22", JSON.stringify(array));
   getItemShop();
 };
@@ -338,3 +350,4 @@ $(function () {
 });
 
 //---------------------------------------------------------------------------------------------------------//
+

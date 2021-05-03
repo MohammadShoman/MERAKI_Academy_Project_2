@@ -94,6 +94,65 @@ body {
   height: 200px;
   width: 100%;
 }
+.item-cart{
+  width: 30%;
+  height: 330px;
+  margin: 15px 15px;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px #000000;
+}
+
+.item-cart p {
+  padding-top: 10px;
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 15px;
+  font-weight: bolder;
+}
+.item-cart .price {
+  font-size: 30px;
+  color: rgb(12, 172, 12);
+}
+.item-cart .btn3 {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: orange;
+  float: right;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  font-style: italic;
+  margin: 5px 5px 0px 15px;
+}
+.item-cart .btn3:hover {
+  background-color: black;
+  color: orange;
+  cursor: pointer;
+}
+.item-cart .remove {
+  font-size: 20px;
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
+  float: left;
+  margin: 5px 5px 0px 15px;
+  padding: 0 10px 0 10px;
+  font-weight: bolder;
+  font-style: italic;
+}
+.item-cart .remove:hover {
+  color: orange;
+  background-color: black;
+}
+
+
+
+
+
+
 
 #header {
   width: 100%;
@@ -347,21 +406,7 @@ body {
   color: orange;
   background-color: black;
 }
-.remove {
-  font-size: 25px;
-  background-color: orange;
-  color: black;
-  border-radius: 5px;
-  float: left;
-  margin: 5px 5px 0px 15px;
-  padding: 0 10px 0 10px;
-  font-weight: bolder;
-  font-style: italic;
-}
-.remove:hover {
-  color: orange;
-  background-color: black;
-}
+
 .user {
   height: 45px;
   width: 45px;
@@ -396,7 +441,6 @@ body {
   background-color:white;
 }
 .login-form{
-  height: 500px;
-  width: 500px;
-  background-color:yellowgreen;
+  
+  
 }

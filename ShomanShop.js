@@ -237,7 +237,7 @@ const getItemShop = () => {
   let fav = JSON.parse(localStorage.getItem("cart22")) || array;
 
   for (let i = 0; i < fav.length; i++) {
-    const myItem = $(`<div class="item">
+    const myItem = $(`<div class="item-cart">
   <img class="image" src=${fav[i].img}>
   <p>${fav[i].name}</p>
   <p class="price">${fav[i].price}</p>

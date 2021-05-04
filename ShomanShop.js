@@ -458,5 +458,44 @@ const userLogin = () => {
     alert("incorrect username or password");
   }
 };
+//----------------------------------------------------------------------------------------------------------------//
+/*--------------------------------------------------- dark mood ------------------------------------------------- */
 
-/*-------------------------------------------------------- */
+$('.light').on('click', () => {
+  if(!$('.light').hasClass("dark")) {
+  $("body").css("background-color",'black');
+  $("#header").css("background-color",'black')
+  $(".item ").css("color","white")
+  $(".footer").css({
+    "background-color":"black",
+    "color":"white",
+
+  })
+  $(".item-cart").css("color","white")
+  $(".form").css("background-color","black")
+$(".homeTitle").css("color","white")
+
+
+
+  $('.light').addClass('dark')
+  
+} else {
+            
+      $("body").css("background-color",'white');
+      $("#header").css("background-color",'white')
+      $(".item ").css("color","black")
+      $(".footer").css({
+        "background-color":"white",
+        "color":"black",
+    
+      })
+      $(".item-cart").css("color","black")
+      $(".form").css("background-color","white")
+      $(".homeTitle").css("color","black")
+
+
+
+      $('.dark').removeClass('dark')
+  
+  }
+})

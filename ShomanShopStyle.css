@@ -12,7 +12,7 @@ body {
   background-color: rgb(223, 223, 223);
   box-sizing: border-box;
 }
-/*logo*/
+/*----------------------------------------------- logo ---------------------------------------------------------*/
 #title {
   color: black;
   font-style: oblique;
@@ -23,6 +23,7 @@ body {
   padding: 5px 10px 5px 10px;
   margin-left: 10px;
   background-color: rgb(223, 223, 223);
+  
 }
 .shopName {
   color: orange;
@@ -30,6 +31,7 @@ body {
   font-style: oblique;
   font-weight: 900;
 }
+
 #allItem {
   margin: 50px auto;
   height: 100%;
@@ -40,6 +42,7 @@ body {
   justify-content: space-between;
   align-items: space-between;
   flex-wrap: wrap;
+  
 }
 /*-----------------------------t-shirt---------------------------------*/
 #items {
@@ -52,6 +55,7 @@ body {
   justify-content: space-between;
   align-items: space-between;
   flex-wrap: wrap;
+  
 }
 
 .item {
@@ -64,6 +68,7 @@ body {
   border: 2px solid whitesmoke;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px #000000;
+  
 }
 .item p {
   padding-top: 10px;
@@ -71,6 +76,7 @@ body {
   font-style: italic;
   margin-left: 15px;
   font-weight: bolder;
+  
 }
 .item .price {
   font-size: 30px;
@@ -82,23 +88,28 @@ body {
   background-color: orange;
   float: right;
   border-radius: 5px;
-  padding: 0 10px 0 10px;
+  padding: 2px 10px 2px 10px;
   font-style: italic;
   margin-right: 15px;
+  
 }
 .item button:hover {
   background-color: black;
   color: orange;
   cursor: pointer;
+  
 }
 
 .image {
   height: 200px;
   width: 100%;
+  isolation: isolate;
 }
+
+/*----------------------------------------------- cart item -----------------------------------------*/
 .item-cart{
   width: 30%;
-  height: 330px;
+  height: 340px;
   margin: 15px 15px;
   justify-content: space-between;
   align-items: center;
@@ -125,9 +136,9 @@ body {
   background-color: orange;
   float: right;
   border-radius: 5px;
-  padding: 0 10px 0 10px;
+  padding: 0 23px 0 23px;
   font-style: italic;
-  margin: 5px 5px 0px 15px;
+  margin: 10px 5px 10px 15px;
 }
 .item-cart .btn3:hover {
   background-color: black;
@@ -140,20 +151,21 @@ body {
   color: black;
   border-radius: 5px;
   float: left;
-  margin: 5px 5px 0px 15px;
-  padding: 0 10px 0 10px;
+  margin: 10px 5px 10px 15px;
+  padding: 2px 10px 2px 10px;
   font-weight: bolder;
   font-style: italic;
 }
 .item-cart .remove:hover {
   color: orange;
   background-color: black;
+  cursor: pointer;
 }
 
 
 
 
-
+/*-------------------------------------------------- header -----------------------------------------*/
 
 
 #header {
@@ -169,6 +181,8 @@ body {
   background-color: white;
   margin-top: -20px;
 }
+
+/*----------------------------------------------- left && right menu -----------------------------------------------*/
 .shop {
   height: 42px;
   width: 42px;
@@ -204,6 +218,7 @@ body {
   color: orange;
 }
 
+/*----------------------------------------------------- jeans item ----------------------------------------*/
 #items2 {
   margin: 50px auto;
   height: 900px;
@@ -216,7 +231,7 @@ body {
   align-items: space-between;
   flex-wrap: wrap;
 }
-
+/*----------------------------------------------------- shoes item ------------------------------------------*/
 #items3 {
   margin: 50px auto;
   height: 900px;
@@ -229,7 +244,7 @@ body {
   align-items: space-between;
   flex-wrap: wrap;
 }
-
+/*---------------------------------------------------- slider -----------------------------------------------------*/
 .full-slider {
   width: 100%;
   height: 450px;
@@ -240,6 +255,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   font-size: 25px;
+  isolation: isolate;
 }
 
 .slide-1 {
@@ -324,7 +340,7 @@ body {
   height: 400px;
 }
 
-
+/*------------------------------------------------- footer ----------------------------------------------------*/
 .footer {
   text-align: center;
   font-size: 15px;
@@ -344,7 +360,7 @@ body {
 .shop2 {
   color: orange;
 }
-
+/*---------------------------------------------------- home ---------------------------------------------*/
 .homeTitle {
   display: flex;
   flex-direction: column;
@@ -368,7 +384,7 @@ body {
   border-radius: 5px;
   font-weight: bolder;
 }
-
+/*------------------------------------------------- shop cart number --------------------------------------*/
 .shopCart p {
   position: absolute;
   font-size: 20px;
@@ -384,7 +400,7 @@ body {
   padding-left: 5px;
   font-weight: bolder;
 }
-
+/*---------------------------------------------------  cart items ---------------------------------------------*/
 #addedItem {
   margin: 65px auto;
 
@@ -396,13 +412,13 @@ body {
   align-items: space-between;
   flex-wrap: wrap;
 }
-#addedItem button {
-  font-size: 25px;
+#addedItem .btn3 {
+  font-size: 20px;
   background-color: orange;
   color: black;
   border-radius: 5px;
-  padding: 0 10px 0 10px;
-  margin: 5px 15px 0px 15px;
+  padding: 2px 25px 2px 25px;
+  margin: 10px 15px 0px 15px;
 }
 #addedItem button:hover {
   color: orange;
@@ -532,6 +548,7 @@ transition: 0.2s;
 .option-1 a{
   color :orange;
 }
+
 
 
 

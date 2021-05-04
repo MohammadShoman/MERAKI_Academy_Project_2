@@ -122,7 +122,8 @@ const homeTitle = $(".homeTitle");
 let counterShop = 0;
 
 //localStorage.setItem("count99",JSON.stringify(counterShop))
-//-----------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------//
+
 $(".form").hide();
 $("#addedItem").hide();
 $("#allItem").hide();
@@ -130,8 +131,9 @@ $("#items").hide();
 $("#items2").hide();
 $("#items3").hide();
 
-//------------------------------------------------------------------
-//home button
+//-------------------------------------------------------------------------------------------------------------------//
+//----------------------------------------------- home button -------------------------------------------------------//
+
 $("#home").on("click", function () {
   $("#items").hide();
   $("#items2").hide();
@@ -142,8 +144,8 @@ $("#home").on("click", function () {
   $("#allItem").show();
   $(".homeTitle").hide();
 });
-//-----------------------------------------------------------------
-//slider button && home  --->  Shop Now button
+//------------------------------------------------------------------------------------------------------------------//
+//------------------------------ slider button && home  --->  Shop Now button --------------------------------------//
 
 const all = () => {
   $("#allItem").html("");
@@ -169,12 +171,12 @@ const all = () => {
   $("#allItem").show();
 };
 $(".slider-btn").on("click", all);
-//--------------------------------------------------------------------
+//----------------------------------------------------------
 $(".slider-btnS").on("click", all);
 
-//---------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------- T-Shirt ------------------------------------------------------------//
 
-//T-Shirt
 $("#t-shirt").on("click", function () {
   $("#items").html("");
 
@@ -196,8 +198,9 @@ $("#t-shirt").on("click", function () {
   $("#addedItem").hide();
   $("#allItem").hide();
 });
-//----------------------------------------------------------
-//array to added on cart
+//-------------------------------------------------------------------------------------------------------------------//
+//--------------------------------------- array to added on cart ----------------------------------------------------//
+
 const counter = document.querySelector(".counter");
 const array = JSON.parse(localStorage.getItem("cart22")) || [];
 counter.innerText = array.length;
@@ -219,8 +222,8 @@ const getShoesItem = (elem) => {
   localStorage.setItem("cart22", JSON.stringify(array));
 };
 
-//---------------------------------------------------------
-//cart button
+//-------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------- cart button -----------------------------------------------------//
 
 const getItemShop = () => {
   $("#items2").hide();
@@ -248,6 +251,7 @@ const getItemShop = () => {
     myItem.appendTo(itemShop);
   }
 };
+
 $(".shop").on("click", getItemShop);
 const removeItem = (elem) => {
   array.splice(elem, 1);
@@ -261,8 +265,9 @@ const removeItem = (elem) => {
   localStorage.setItem("cart22", JSON.stringify(array));
   getItemShop();
 };
-//----------------------------------------------------------
-//jeans button
+//-------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------- jeans button ----------------------------------------------------------//
+
 $("#jeans").on("click", function () {
   $("#items2").html("");
 
@@ -285,8 +290,9 @@ $("#jeans").on("click", function () {
   $(".form").hide();
 });
 
-//-------------------------------------------------------------------
-//shoes button
+//------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------- shoes button --------------------------------------------------------//
+
 $("#shoes").on("click", function () {
   $("#items3").html("");
   for (i = 0; i < allItems[2].length; i++) {
@@ -309,8 +315,9 @@ $("#shoes").on("click", function () {
   $("#allItem").hide();
   $(".form").hide();
 });
-//-----------------------------------------------------------------------
-//slider
+//------------------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------- slider ------------------------------------------------------//
+
 $(function () {
   //settings for slider
   var width = 1000;
@@ -347,7 +354,8 @@ $(function () {
   startSlider();
 });
 
-//---------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------- login icon -----------------------------------------------------//
+
 const login = $(".loginIcon");
 const login1 = $(".form");
 
@@ -360,16 +368,16 @@ $(".loginIcon").on("click", function () {
   $("#addedItem").hide();
   $("#allItem").hide();
   $(".signup-form").hide();
-    $(".login-form").show();
+  $(".login-form").show();
   $(".form").show();
 });
 
-//----------------------------------------------------------------
-//login
+//-------------------------------------------------------------------------------------------------------------------//
+/*----------------------------------------------------- login -------------------------------------------------------*/
 
 $(".login-form .option-1 a").on("click", function () {
   $(".login-form").hide();
-  
+
   $(".signup-form").animate(
     {
       height: "toggle",
@@ -381,7 +389,7 @@ $(".login-form .option-1 a").on("click", function () {
 
 $(".signup-form .option-1 a").on("click", function () {
   $(".signup-form").hide();
-  
+
   $(".login-form").animate(
     {
       height: "toggle",
@@ -390,3 +398,65 @@ $(".signup-form .option-1 a").on("click", function () {
     "slow"
   );
 });
+
+//----------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------- login && register--------------------------------------------------------//
+const registered = JSON.parse(localStorage.getItem("register")) || [
+  {
+    username: "mohammad",
+    password: "123456789",
+    email: "moha.shu66@gmail.com",
+  },
+];
+
+//------------------------------------------------ register ----------------------------------------------------------//
+const loginRegister = () => {
+  let username = $("#username").val();
+  let email = $("#email").val();
+  let password = $("#password").val();
+  let findUser = registered.filter(
+    (elm) => elm.username === username || elm.email === email
+  );
+
+  if (!findUser.length) {
+    registered.push({ username: username, password: password, email: email });
+
+    localStorage.setItem("register", JSON.stringify(registered));
+    $(".signup-form").hide();
+    $(".login-form").show();
+    console.log(registered);
+
+    alert("signUp successfully");
+  } else {
+    alert("user already  exist");
+  }
+  console.log(registered);
+
+  console.log(registered);
+  //console.log(username)
+};
+
+//--------------------------------------------------- login ---------------------------------------------------------------//
+
+const userLogin = () => {
+  let loginUser = $("#loguser").val();
+  let loginPass = $("#logpass").val();
+
+  let findUser = registered.filter((elm) => elm.username === loginUser);
+
+  if (
+    findUser[0].username === loginUser &&
+    findUser[0].password === loginPass
+  ) {
+    $(".login-form").hide();
+    $(".form").hide();
+    $("#slider").show();
+    $(".homeTitle").show();
+
+    alert("login successfully");
+  } else {
+    alert("incorrect username or password");
+  }
+};
+
+/*-------------------------------------------------------- */

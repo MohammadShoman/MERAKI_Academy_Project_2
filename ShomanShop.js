@@ -132,6 +132,7 @@ $("#items2").hide();
 $("#items3").hide();
 $(".signUpS").hide();
 $(".signUpS2").hide();
+$(".loginS").hide();
 
 //-------------------------------------------------------------------------------------------------------------------//
 //----------------------------------------------- home button -------------------------------------------------------//
@@ -147,6 +148,7 @@ $("#home").on("click", function () {
   $(".homeTitle").hide();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   darkMode();
 });
 //------------------------------------------------------------------------------------------------------------------//
@@ -175,6 +177,7 @@ const all = () => {
   $(".form").hide();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   $("#allItem").show();
   darkMode();
 };
@@ -207,6 +210,7 @@ $("#t-shirt").on("click", function () {
   $("#allItem").hide();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   darkMode();
 });
 //-------------------------------------------------------------------------------------------------------------------//
@@ -263,6 +267,7 @@ const getItemShop = () => {
   $(".form").hide();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   $("#addedItem").show();
   darkMode();
 };
@@ -305,6 +310,7 @@ $("#jeans").on("click", function () {
   $(".signUpS").hide();
   $(".form").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   darkMode();
 });
 
@@ -334,6 +340,7 @@ $("#shoes").on("click", function () {
   $(".form").hide();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   darkMode();
 });
 //------------------------------------------------------------------------------------------------------------------//
@@ -392,6 +399,7 @@ $(".loginIcon").on("click", function () {
   $(".login-form").show();
   $(".signUpS").hide();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   $(".form").show();
   darkMode();
 });
@@ -458,6 +466,7 @@ const loginRegister = () => {
   } else {
     $(".signUpS2").show();
     $(".signup-form").hide();
+    
     darkMode();
   }
   console.log(registered);
@@ -479,13 +488,15 @@ const userLogin = () => {
   ) {
     $(".login-form").hide();
     $(".form").hide();
-    $("#slider").show();
-    $(".homeTitle").show();
+    $("#slider").hide();
+    $(".homeTitle").hide();
     $(".signUpS").hide();
     $(".signUpS2").hide();
+    $(".loginS").show()
+
     darkMode();
 
-    alert("login successfully");
+    
   } else {
     alert("incorrect username or password");
   }
@@ -604,6 +615,7 @@ $(".signUpS-btn").on("click",function(){
   $(".signup-form").hide();
   $(".login-form").show();
   $(".signUpS2").hide();
+  $(".loginS").hide();
   $(".form").show();
   darkMode();
 })
@@ -621,5 +633,23 @@ $(".signUpS-btn2").on("click",function(){
   $(".signUpS").hide();
   $(".form").show();
   $(".signUpS2").hide();
+  $(".loginS").hide()
+  darkMode();
+})
+$(".loginS-btn").on("click",function(){
+  $(".signUpS").hide();
+  $("#items3").hide();
+  $("#slider").show();
+  $("#items").hide();
+  $("#items2").hide();
+  $(".homeTitle").show();
+  $("#addedItem").hide();
+  $("#allItem").hide();
+  $(".signup-form").hide();
+  $(".login-form").hide();
+  $(".signUpS").hide();
+  $(".form").show();
+  $(".signUpS2").hide();
+  $(".loginS").hide();
   darkMode();
 })

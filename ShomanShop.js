@@ -457,8 +457,9 @@ const loginRegister = () => {
   let findUser = registered.filter(
     (elm) => elm.username === username || elm.email === email
   );
-
+  if(username.length!==0 &&password.length !==0){
   if (!findUser.length) {
+    
     registered.push({ username: username, password: password, email: email });
 
     localStorage.setItem("register", JSON.stringify(registered));
@@ -479,7 +480,7 @@ const loginRegister = () => {
     darkMode();
   }
   console.log(registered);
-
+  }
   //console.log(username)
 };
 
@@ -490,7 +491,7 @@ const userLogin = () => {
   let loginPass = $("#logpass").val();
 
   let findUser = registered.filter((elm) => elm.username === loginUser);
-
+if(loginUser.length!==0&&loginPass !==0){
   if (
     findUser[0].username === loginUser &&
     findUser[0].password === loginPass
@@ -512,6 +513,7 @@ const userLogin = () => {
     $(".login-form").hide();
     darkMode();
   }
+}
 };
 //----------------------------------------------------------------------------------------------------------------//
 /*--------------------------------------------------- dark mood ------------------------------------------------- */

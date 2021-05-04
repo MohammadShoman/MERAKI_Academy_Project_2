@@ -560,69 +560,113 @@ transition: 0.2s;
 .signUpS{
   height: 200px;
   width: 350px;
-  background-color:orangered;
+  background-color:white;
   display:flex;
   flex-direction: column;
   margin: 200px auto;
   justify-content:center;
   align-items:center;
   border-radius: 5px;
+  border: 5px solid orange;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bolder;
 }
 .signUpS button{
 margin-top:30px;
-height: 50px;
+height: 40px;
 width: 70px;
+font-size:25;
+font-weight: bolder;
+font-style: italic;
+background-color: black;
+color:orange;
+border-radius: 5px;
+cursor: pointer;
 }
 
 .signUpS2{
   height: 200px;
   width: 350px;
-  background-color:orangered;
+  background-color:white;
   display:flex;
   flex-direction: column;
   margin: 200px auto;
   justify-content:center;
   align-items:center;
   border-radius: 5px;
+  border: 5px solid orange;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bolder;
 }
 .signUpS2 button{
 margin-top:30px;
-height: 50px;
+height: 40px;
 width: 70px;
+font-size:25;
+font-weight: bolder;
+font-style: italic;
+background-color: black;
+color:orange;
+border-radius: 5px;
+cursor: pointer;
 }
 
 
 .loginS{
   height: 200px;
   width: 350px;
-  background-color:orangered;
+  background-color:white;
   display:flex;
   flex-direction: column;
   margin: 200px auto;
   justify-content:center;
   align-items:center;
   border-radius: 5px;
+  border: 5px solid orange;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .loginS button{
   margin-top:30px;
-height: 50px;
+height: 40px;
 width: 70px;
+font-size:25;
+font-weight: bolder;
+font-style: italic;
+background-color: black;
+color:orange;
+border-radius: 5px;
+cursor: pointer;
 }
 .loginS2{
   height: 200px;
   width: 350px;
-  background-color:orangered;
+  background-color:white;
   display:flex;
   flex-direction: column;
   margin: 200px auto;
   justify-content:center;
   align-items:center;
   border-radius: 5px;
+  border: 5px solid orange;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .loginS2 button{
   margin-top:30px;
-height: 50px;
+height: 40px;
 width: 70px;
+font-size:25;
+font-weight: bolder;
+font-style: italic;
+background-color: black;
+color:orange;
+border-radius: 5px;
+cursor: pointer;
 }

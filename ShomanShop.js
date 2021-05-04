@@ -315,7 +315,7 @@ $(function () {
   //settings for slider
   var width = 1000;
   var animationSpeed = 1500;
-  var pause = 5000;
+  var pause = 7000;
   var currentSlide = 1;
 
   var $slider = $("#slider");
@@ -359,5 +359,34 @@ $(".loginIcon").on("click", function () {
   $(".homeTitle").hide();
   $("#addedItem").hide();
   $("#allItem").hide();
+  $(".signup-form").hide();
+    $(".login-form").show();
   $(".form").show();
+});
+
+//----------------------------------------------------------------
+//login
+
+$(".login-form .option-1 a").on("click", function () {
+  $(".login-form").hide();
+  
+  $(".signup-form").animate(
+    {
+      height: "toggle",
+      opacity: "toggle",
+    },
+    "slow"
+  );
+});
+
+$(".signup-form .option-1 a").on("click", function () {
+  $(".signup-form").hide();
+  
+  $(".login-form").animate(
+    {
+      height: "toggle",
+      opacity: "toggle",
+    },
+    "slow"
+  );
 });

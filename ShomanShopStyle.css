@@ -436,7 +436,7 @@ body {
   font-style: italic;
 }
 /* ------------------------------------------------------------ */
-/* login*/
+/* login  $$ sign up*/
 .form{
   z-index: 1;
   margin-top:45px;
@@ -461,6 +461,21 @@ body {
   padding: 25px;
   background-color:white;
 }
+.signup-form {
+  display:flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border:5px solid orange; 
+  border-radius:10px;
+  padding: 25px;
+  background-color:white;
+}
+
+
+
  .btn4{
   z-index: 1;
   color: black;
@@ -483,9 +498,7 @@ body {
   
 
 }
-.signup-form {
-  display:none;
-}
+
 .user-input:hover ,.user-input:focus ,.user-input:active{
   border-left:  solid 8px orange;
   border-right:  solid 8px orange;
@@ -521,14 +534,5 @@ transition: 0.2s;
 }
 
 
-@media screen and (max-width:500px){
-  .form{
-    width: 95%;
-  }
-  .user-input{
-    width: 100%;
-  }
-  .btn{
-    width: 100%;
-  }
-}
+
+

@@ -557,5 +557,55 @@ transition: 0.2s;
   cursor: pointer;
 }
 
+.signUpS{
+  height: 200px;
+  width: 350px;
+  background-color:orangered;
+  display:flex;
+  flex-direction: column;
+  margin: 200px auto;
+  justify-content:center;
+  align-items:center;
+  border-radius: 5px;
+}
+.signUpS button{
+margin-top:30px;
+height: 50px;
+width: 70px;
+}
+
+.signUpS2{
+  height: 200px;
+  width: 350px;
+  background-color:orangered;
+  display:flex;
+  flex-direction: column;
+  margin: 200px auto;
+  justify-content:center;
+  align-items:center;
+  border-radius: 5px;
+}
+.signUpS2 button{
+margin-top:30px;
+height: 50px;
+width: 70px;
+}
 
 
+.loginS{
+  height: 200px;
+  width: 350px;
+  background-color:orangered;
+  display:flex;
+  flex-direction: column;
+  margin: 200px auto;
+  justify-content:center;
+  align-items:center;
+  border-radius: 5px;
+}
+
+.loginS button{
+  margin-top:30px;
+height: 50px;
+width: 70px;
+}

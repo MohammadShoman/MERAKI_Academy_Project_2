@@ -609,3 +609,20 @@ width: 70px;
 height: 50px;
 width: 70px;
 }
+.loginS2{
+  height: 200px;
+  width: 350px;
+  background-color:orangered;
+  display:flex;
+  flex-direction: column;
+  margin: 200px auto;
+  justify-content:center;
+  align-items:center;
+  border-radius: 5px;
+}
+
+.loginS2 button{
+  margin-top:30px;
+height: 50px;
+width: 70px;
+}

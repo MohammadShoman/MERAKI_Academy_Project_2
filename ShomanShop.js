@@ -143,6 +143,7 @@ $("#home").on("click", function () {
   $("#addedItem").hide();
   $("#allItem").show();
   $(".homeTitle").hide();
+  darkMode();
 });
 //------------------------------------------------------------------------------------------------------------------//
 //------------------------------ slider button && home  --->  Shop Now button --------------------------------------//
@@ -169,6 +170,7 @@ const all = () => {
   $("#addedItem").hide();
   $(".form").hide();
   $("#allItem").show();
+  darkMode();
 };
 $(".slider-btn").on("click", all);
 //----------------------------------------------------------
@@ -197,6 +199,7 @@ $("#t-shirt").on("click", function () {
   $(".form").hide();
   $("#addedItem").hide();
   $("#allItem").hide();
+  darkMode();
 });
 //-------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------- array to added on cart ----------------------------------------------------//
@@ -234,6 +237,7 @@ const getItemShop = () => {
   $("#addedItem").show();
   $("#allItem").hide();
   $(".form").hide();
+  darkMode();
 
   itemShop.html(``);
 
@@ -288,6 +292,7 @@ $("#jeans").on("click", function () {
   $("#addedItem").hide();
   $("#allItem").hide();
   $(".form").hide();
+  darkMode();
 });
 
 //------------------------------------------------------------------------------------------------------------------//
@@ -314,6 +319,7 @@ $("#shoes").on("click", function () {
   $("#addedItem").hide();
   $("#allItem").hide();
   $(".form").hide();
+  darkMode();
 });
 //------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------- slider ------------------------------------------------------//
@@ -370,6 +376,7 @@ $(".loginIcon").on("click", function () {
   $(".signup-form").hide();
   $(".login-form").show();
   $(".form").show();
+  darkMode();
 });
 
 //-------------------------------------------------------------------------------------------------------------------//
@@ -424,6 +431,7 @@ const loginRegister = () => {
     localStorage.setItem("register", JSON.stringify(registered));
     $(".signup-form").hide();
     $(".login-form").show();
+    darkMode();
     console.log(registered);
 
     alert("signUp successfully");
@@ -452,6 +460,7 @@ const userLogin = () => {
     $(".form").hide();
     $("#slider").show();
     $(".homeTitle").show();
+    darkMode();
 
     alert("login successfully");
   } else {
@@ -460,46 +469,50 @@ const userLogin = () => {
 };
 //----------------------------------------------------------------------------------------------------------------//
 /*--------------------------------------------------- dark mood ------------------------------------------------- */
-let x=true;
-$(".light").on("click", function(){
-  if(x){
-    x=false
-  }else{x=true}
+let x = true;
+
+
+const darkMode = () => {
+  if (!x) {
+   // if (!$(".light").hasClass("dark")) {
+      $("body").css("background-color", "black");
+      $("#header").css("background-color", "black");
+      $(".item").css("color", "white");
+      $(".footer").css({
+        "background-color": "black",
+        "color": "white",
+      });
+      $(".item-cart").css("color", "white");
+      $(".form").css("background-color", "black");
+      $(".homeTitle").css("color", "white");
+      
+
+     // $(".light").addClass("dark");
+    //}
+  } else {
+    $("body").css("background-color", "white");
+    $("#header").css("background-color", "white");
+    $(".item ").css("color", "black");
+    $(".footer").css({
+      "background-color": "white",
+      "color": "black",
+    });
+    $(".item-cart").css("color", "black");
+    $(".form").css("background-color", "white");
+    $(".homeTitle").css("color", "black");
+    
+
+
+    // $(".dark").removeClass("dark");
+  }
+  console.log("aaaa")
+};
+$(".light").on("click", function () {
+  if (x) {
+    x = false;
+  } else {
+    x = true;
+  }
   darkMode();
   
-}) 
-
-
-const darkMode=()=>{
-  if(!x){
-    if (!$(".light").hasClass("dark")) {
-    $("body").css("background-color", "black");
-    $("#header").css("background-color", "black");
-    $(".item").css("color", "white");
-    $(".footer").css({
-      "background-color": "black",
-      color: "white",
-    });
-    $(".item-cart").css("color", "white");
-    $(".form").css("background-color", "black");
-    $(".homeTitle").css("color", "white");
-
-    $(".light").addClass("dark");}
-    
-      
-    } else {
-      $("body").css("background-color", "white");
-      $("#header").css("background-color", "white");
-      $(".item ").css("color", "black");
-      $(".footer").css({
-        "background-color": "white",
-        color: "black",
-      });
-      $(".item-cart").css("color", "black");
-      $(".form").css("background-color", "white");
-      $(".homeTitle").css("color", "black");
-  
-      $(".dark").removeClass("dark");
-      
-    }
-}
+});
